@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rodri.dmredip.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/lay"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/IP"
+            android:text="Introduzca la direccion de red: "
+            android:textSize="15sp"
+            android:layout_margin="2dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginLeft="46dp"
+            android:layout_marginTop="2dp"
+            android:layout_height="wrap_content"
+            android:text="Mascara"
+            android:layout_toRightOf="@id/IP"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutIP"
+        android:layout_below="@id/lay"
+        android:gravity="center"
+        >
+        <EditText
+            android:id="@+id/primer"
+
+            android:layout_margin="10dp"
+
+            android:inputType="number"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:maxLength="3"
+            android:maxLines="1"
+            />
+        <TextView
+            android:id="@+id/point1"
+            android:layout_width="wrap_content"
+            android:textSize="24sp"
+            android:text="."
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/primer"
+            android:layout_alignBaseline="@id/primer"
+            />
+
+        <EditText
+            android:id="@+id/segundo"
+            android:layout_margin="10dp"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_toRightOf="@id/point1"
+            android:layout_alignBaseline="@id/point1"
+            android:maxLength="3"
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/point2"
+            android:layout_width="wrap_content"
+            android:textSize="24sp"
+            android:text="."
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/segundo"
+            android:layout_alignBaseline="@id/segundo"
+            />
+
+        <EditText
+            android:id="@+id/tercer"
+            android:layout_margin="10dp"
+            android:layout_width="40dp"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/point2"
+            android:layout_alignBaseline="@id/point2"
+            android:maxLength="3"
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/point3"
+            android:layout_width="wrap_content"
+            android:textSize="24sp"
+            android:text="."
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tercer"
+            android:layout_alignBaseline="@id/tercer"
+            />
+        <EditText
+            android:id="@+id/cuarto"
+            android:layout_margin="10dp"
+            android:layout_width="40dp"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/point3"
+            android:layout_alignBaseline="@id/point3"
+            android:maxLength="3"
+            android:maxLines="1"/>
+        <TextView
+            android:id="@+id/point4"
+            android:layout_width="wrap_content"
+
+            android:textSize="20sp"
+            android:text="/"
+
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/mascara"
+            android:layout_alignBaseline="@id/cuarto"
+            />
+
+        <EditText
+            android:id="@+id/mascara"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:maxLength="3"
+            android:inputType="number"
+            android:layout_toRightOf="@id/cuarto"
+            android:layout_alignBaseline="@id/cuarto"
+            android:maxLines="1"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/layoutNet"
+        android:layout_below="@id/layoutIP"
+        >
+        <TextView
+
+            android:id="@+id/text_net_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Net ID:"
+            android:layout_marginVertical="8dp"
+            android:textSize="20sp"
+            android:layout_below="@id/layoutIP"
+
+            />
+
+        <TextView
+            android:id="@+id/net_id"
+            android:layout_width="160dp"
+
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_net_id"
+            android:textSize="16sp"
+            android:layout_alignLeft="@id/text_net_id"
+            />
+
+        <TextView
+            android:id="@+id/broadcast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginVertical="8dp"
+            android:text="Broadcast: "
+
+            android:layout_alignLeft="@id/net_id"
+            />
+
+        <TextView
+            android:id="@+id/broadcast_text"
+            android:layout_width="160dp"
+            android:textSize="16sp"
+
+            android:layout_height="wrap_content"
+            android:layout_below="@id/broadcast"
+            android:layout_alignLeft="@id/broadcast"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/layoutHost"
+        android:layout_below="@id/layoutNet">
+        <TextView
+            android:id="@+id/host_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Host:"
+            android:textSize="20sp"
+            android:layout_below="@id/net_id"
+            android:layout_alignLeft="@id/net_id"
+            />
+
+        <TextView
+            android:id="@+id/host_text"
+            android:layout_width="190dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginVertical="8dp"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/host_view"
+            android:layout_alignLeft="@id/host_view"/>
+
+        <TextView
+            android:id="@+id/red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Red:"
+            android:textSize="20sp"
+            android:layout_below="@id/host_text"
+            android:layout_alignLeft="@id/host_text"
+            />
+
+        <TextView
+            android:id="@+id/red_text"
+            android:layout_width="190dp"
+            android:textSize="16sp"
+            android:layout_marginVertical="8dp"
+            android:layout_marginLeft="2dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/red"
+            android:layout_alignLeft="@id/red"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/cantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Cantidad de IP utilizables:"
+        android:textSize="20sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@id/layoutHost"
+
+
+        />
+
+    <TextView
+        android:id="@+id/cantidad_text"
+        android:layout_width="160dp"
+        android:textSize="16sp"
+        android:layout_below="@id/layoutHost"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/cantidad"
+        />
+</RelativeLayout>
